@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>斗罗大陆漫画瓜子-斗罗大陆漫画瓜子在线阅读_斗罗大陆漫画瓜子更新与章节入口</title>
+<meta name="description" content="斗罗大陆漫画瓜子主题首页，梳理斗罗大陆漫画瓜子的阅读入口、章节更新节奏与人物线索，帮助读者快速找到斗罗大陆漫画瓜子最新可读章节与稳定阅读路径。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231b1f3a'/%3E%3Ccircle cx='24' cy='26' r='9' fill='%23ffcf5c'/%3E%3Ccircle cx='42' cy='38' r='9' fill='%23ff8a3d'/%3E%3Cpath d='M14 48c8-6 28-6 36 0' stroke='%23f4f1e8' stroke-width='4' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+<style>
+:root{
+  --ink:#1b1f3a;
+  --ink-soft:#3b4066;
+  --paper:#f6f2e8;
+  --paper-2:#fffdf7;
+  --gold:#ffcf5c;
+  --orange:#ff8a3d;
+  --line:#e2dcc9;
+  --shadow:0 10px 30px rgba(27,31,58,.10);
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,sans-serif;
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none;}
+img,svg{display:block;max-width:100%;}
+.wrap{width:min(1120px,92vw);margin:0 auto;}
+
+/* 页头 */
+header.site{
+  position:sticky;top:0;z-index:50;
+  background:rgba(246,242,232,.92);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+}
+.bar{display:flex;align-items:center;gap:22px;padding:12px 0;flex-wrap:wrap;}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:17px;letter-spacing:.5px;color:var(--ink);}
+.logo .mark{width:38px;height:38px;flex:0 0 38px;}
+nav.main{margin-left:auto;display:flex;gap:6px;flex-wrap:wrap;}
+nav.main a{
+  font-size:14px;padding:7px 12px;border-radius:999px;color:var(--ink-soft);
+  transition:.2s;
+}
+nav.main a:hover,nav.main a:focus-visible{background:var(--ink);color:var(--paper-2);outline:none;}
+
+/* 首屏 */
+.hero{padding:44px 0 36px;}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:36px;align-items:center;}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:13px;font-weight:700;letter-spacing:1px;
+  color:var(--ink);background:var(--gold);
+  padding:5px 14px;border-radius:999px;
+}
+h1{
+  font-size:clamp(28px,4.6vw,46px);
+  line-height:1.25;margin:16px 0 14px;
+  letter-spacing:1px;font-weight:900;
+}
+h1 .hl{
+  background:linear-gradient(transparent 62%,var(--gold) 62%);
+  padding:0 2px;
+}
+.lede{font-size:16px;color:var(--ink-soft);max-width:34em;margin:0 0 22px;}
+.cta{display:flex;gap:12px;flex-wrap:wrap;align-items:center;}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:12px 22px;border-radius:12px;font-weight:700;font-size:15px;
+  transition:.2s;border:1.5px solid var(--ink);
+}
+.btn.primary{background:var(--ink);color:var(--paper-2);box-shadow:var(--shadow);}
+.btn.primary:hover{transform:translateY(-2px);}
+.btn.ghost{background:transparent;color:var(--ink);}
+.btn.ghost:hover{background:var(--ink);color:var(--paper-2);}
+.btn[aria-disabled="true"]{opacity:.55;pointer-events:none;cursor:not-allowed;}
+
+.hero-art{
+  background:var(--paper-2);
+  border:1px solid var(--line);
+  border-radius:22px;
+  padding:18px;
+  box-shadow:var(--shadow);
+}
+.hero-art .cap{font-size:12.5px;color:var(--ink-soft);margin-top:10px;text-align:center;letter-spacing:.3px;}
+
+/* 通用区块 */
+section.block{padding:34px 0;border-top:1px solid var(--line);}
+.sec-head{display:flex;align-items:flex-end;gap:14px;flex-wrap:wrap;margin-bottom:20px;}
+h2{font-size:clamp(20px,2.6vw,26px);margin:0;font-weight:900;letter-spacing:.5px;}
+.sec-head p{margin:0;font-size:14px;color:var(--ink-soft);}
+.tagline{font-size:13px;color:var(--orange);font-weight:700;letter-spacing:1px;}
+
+/* 章节卡片 */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+.card{
+  background:var(--paper-2);border:1px solid var(--line);border-radius:16px;
+  padding:20px 18px;display:flex;flex-direction:column;gap:8px;
+  transition:.2s;
+}
+.card:hover{transform:translateY(-3px);box-shadow:var(--shadow);}
+.card .k{font-size:12px;font-weight:800;letter-spacing:1px;color:var(--orange);}
+.card h3{margin:0;font-size:17px;font-weight:800;}
+.card p{margin:0;font-size:14px;color:var(--ink-soft);}
+.card .go{margin-top:auto;font-size:13.5px;font-weight:700;color:var(--ink);border-bottom:2px solid var(--gold);align-self:flex-start;padding-bottom:2px;}
+
+/* 阅读提示列表 */
+.tips{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;}
+.tip{
+  background:var(--paper-2);border:1px solid var(--line);border-radius:14px;
+  padding:18px;display:flex;gap:14px;
+}
+.tip .num{
+  flex:0 0 34px;height:34px;border-radius:10px;background:var(--ink);color:var(--gold);
+  display:grid;place-items:center;font-weight:900;font-size:14px;
+}
+.tip h3{margin:0 0 4px;font-size:15.5px;}
+.tip p{margin:0;font-size:14px;color:var(--ink-soft);}
+
+/* 人物 */
+.roles{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;}
+.role{
+  background:var(--paper-2);border:1px solid var(--line);border-radius:14px;
+  padding:16px;text-align:center;
+}
+.role .av{width:56px;height:56px;margin:0 auto 10px;}
+.role strong{display:block;font-size:15px;}
+.role span{font-size:13px;color:var(--ink-soft);}
+
+/* 正文段 */
+.prose{max-width:44em;font-size:15.5px;color:var(--ink-soft);}
+.prose p{margin:0 0 14px;}
+.prose strong{color:var(--ink);}
+
+/* 搜索 */
+.searchbox{
+  background:var(--paper-2);border:1px solid var(--line);border-radius:16px;
+  padding:20px;display:grid;gap:12px;
+}
+.searchbox label{font-size:13.5px;font-weight:700;}
+.field{display:flex;gap:10px;flex-wrap:wrap;}
+.field input{
+  flex:1 1 220px;padding:11px 14px;border-radius:10px;border:1.5px solid var(--line);
+  background:var(--paper);font-size:15px;color:var(--ink);font-family:inherit;
+}
+.field input:focus{outline:2px solid var(--gold);outline-offset:1px;}
+#searchResult{font-size:14px;color:var(--ink-soft);min-height:22px;}
+#searchResult b{color:var(--ink);}
+
+/* 页尾 */
+footer.site{
+  border-top:1px solid var(--line);padding:28px 0 34px;margin-top:10px;
+  background:var(--paper);
+}
+.foot-grid{display:flex;gap:20px;justify-content:space-between;flex-wrap:wrap;align-items:flex-start;}
+.foot-brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:15px;}
+.foot-brand .mark{width:30px;height:30px;}
+footer.site p{font-size:13px;color:var(--ink-soft);margin:8px 0 0;max-width:30em;}
+.foot-links{display:flex;gap:16px;flex-wrap:wrap;font-size:13.5px;color:var(--ink-soft);}
+.foot-links a{border-bottom:1px solid var(--line);padding-bottom:1px;}
+.foot-links a:hover{color:var(--ink);border-color:var(--gold);}
+
+@media(max-width:900px){
+  .hero-grid{grid-template-columns:1fr;}
+  .hero-art{order:-1;max-width:420px;}
+  .cards{grid-template-columns:1fr 1fr;}
+  .roles{grid-template-columns:1fr 1fr;}
+  .tips{grid-template-columns:1fr;}
+}
+@media(max-width:600px){
+  .bar{gap:10px;}
+  nav.main{width:100%;margin-left:0;overflow-x:auto;padding-bottom:2px;}
+  nav.main a{white-space:nowrap;font-size:13px;}
+  .hero{padding:26px 0 24px;}
+  .cards{grid-template-columns:1fr;}
+  .roles{grid-template-columns:1fr 1fr;}
+  .lede{font-size:15px;}
+  section.block{padding:26px 0;}
+  .btn{padding:11px 18px;font-size:14px;}
+}
+</style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap bar">
+    <a class="logo" href="#top" aria-label="斗罗大陆漫画瓜子 首页">
+      <svg class="mark" viewBox="0 0 64 64" role="img" aria-hidden="true">
+        <rect width="64" height="64" rx="14" fill="#1b1f3a"/>
+        <circle cx="24" cy="26" r="9" fill="#ffcf5c"/>
+        <circle cx="42" cy="38" r="9" fill="#ff8a3d"/>
+        <path d="M14 48c8-6 28-6 36 0" stroke="#f4f1e8" stroke-width="4" fill="none" stroke-linecap="round"/>
+      </svg>
+      <span>斗罗大陆漫画瓜子</span>
+    </a>
+    <nav class="main" aria-label="主导航">
+      <a href="#chapters">章节入口</a>
+      <a href="#reading">阅读提示</a>
+      <a href="#roles">人物线索</a>
+      <a href="#about">内容说明</a>
+      <a href="#find">找章节</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero wrap">
+    <div class="hero-grid">
+      <div>
+        <span class="eyebrow">漫画阅读 · 主题首页</span>
+        <h1>斗罗大陆漫画瓜子</h1>
+        <p class="lede">这里是围绕「斗罗大陆漫画瓜子」的阅读入口页：把连载章节、人物关系与阅读顺序放在一处，让第一次接触的读者也能顺着线索读下去，老读者则可以直接跳到最新一话。</p>
+        <div class="cta">
+          <a class="btn primary" href="#chapters">进入章节入口
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" stroke="#ffcf5c" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a class="btn ghost" href="#reading">先看阅读提示</a>
+          <a class="btn ghost" href="#" download data-download-placeholder="true" aria-disabled="true" tabindex="-1">下载</a>
+        </div>
+      </div>
+      <figure class="hero-art" style="margin:0;">
+        <svg viewBox="0 0 360 220" role="img" aria-label="斗罗大陆漫画瓜子主题插画：翻开的漫画书与散落的瓜子形状装饰">
+          <rect x="0" y="0" width="360" height="220" rx="16" fill="#f6f2e8"/>
+          <circle cx="300" cy="46" r="34" fill="#ffcf5c" opacity=".55"/>
+          <circle cx="58" cy="176" r="26" fill="#ff8a3d" opacity=".35"/>
+          <g transform="translate(64 58)">
+            <path d="M0 20c30-14 86-14 116 0v96c-30-14-86-14-116 0z" fill="#fffdf7" stroke="#1b1f3a" stroke-width="3" stroke-linejoin="round"/>
+            <path d="M116 20c30-14 86-14 116 0v96c-30-14-86-14-116 0z" fill="#fffdf7" stroke="#1b1f3a" stroke-width="3" stroke-linejoin="round"/>
+            <path d="M116 20v96" stroke="#1b1f3a" stroke-width="3"/>
+            <path d="M22 46h68M22 64h68M22 82h44" stroke="#c9c2ae" stroke-width="4" stroke-linecap="round"/>
+            <path d="M138 46h68M138 64h68M138 82h44" stroke="#c9c2ae" stroke-width="4" stroke-linecap="round"/>
+            <ellipse cx="58" cy="112" rx="9" ry="12" fill="#ff8a3d" transform="rotate(-24 58 112)"/>
+            <ellipse cx="176" cy="112" rx="9" ry="12" fill="#ffcf5c" transform="rotate(20 176 112)"/>
+          </g>
+        </svg>
+        <figcaption class="cap">斗罗大陆漫画瓜子 · 章节连续阅读示意</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="block wrap" id="chapters">
+    <div class="sec-head">
+      <h2>斗罗大陆漫画瓜子章节入口</h2>
+      <p>按阅读阶段选择入口，避免跳章漏情节。</p>
+    </div>
+    <div class="cards">
+      <article class="card">
+        <span class="k">01 · 起步</span>
+        <h3>开篇到觉醒</h3>
+        <p>从主角的童年与武魂觉醒看起，这段交代了世界观基础，也是理解后续战斗设定的前提。斗罗大陆漫画瓜子在这里埋下大量伏笔。</p>
+        <a class="go" href="#reading">阅读顺序提示</a>
+      </article>
+      <article class="card">
+        <span class="k">02 · 主线</span>
+        <h3>学院与魂师试炼</h3>
+        <p>学院篇是节奏最密集的一段，人物组队、魂环获取与对抗训练交替推进，适合连续多话阅读。</p>
+        <a class="go" href="#roles">对应人物线索</a>
+      </article>
+      <article class="card">
+        <span class="k">03 · 进阶</span>
+        <h3>高阶对战段落</h3>
+        <p>进入高阶段落后面临更多队伍与势力，建议回看前文设定再继续，斗罗大陆漫画瓜子的战斗分镜在这一阶段更密集。</p>
+        <a class="go" href="#find">定位具体章节</a>
+      </article>
+    </div>
+  </section>
+
+  <section class="block wrap" id="reading">
+    <div class="sec-head">
+      <h2>斗罗大陆漫画瓜子阅读提示</h2>
+      <p>四个小建议，让连载阅读更顺。</p>
+    </div>
+    <div class="tips">
+      <div class="tip">
+        <div class="num">1</div>
+        <div>
+          <h3>先认设定再看战斗</h3>
+          <p>武魂、魂环、魂力等级是全书通用语言。先弄懂这三项，斗罗大陆漫画瓜子的战斗描写会清楚很多。</p>
+        </div>
+      </div>
+      <div class="tip">
+        <div class="num">2</div>
+        <div>
+          <h3>按卷而非按话追</h3>
+          <p>连载常以段落推进，按卷读比按话读更容易抓住一次完整事件的开头与收束。</p>
+        </div>
+      </div>
+      <div class="tip">
+        <div class="num">3</div>
+        <div>
+          <h3>留意队伍成员变化</h3>
+          <p>队伍名单会随剧情调整，成员变动往往预示着下一段对手的强弱。斗罗大陆漫画瓜子的人物出场密度较高。</p>
+        </div>
+      </div>
+      <div class="tip">
+        <div class="num">4</div>
+        <div>
+          <h3>回看关键对照页</h3>
+          <p>能力对照与人物关系常以整页呈现，读到战力变化时回翻一页，理解成本会明显下降。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block wrap" id="roles">
+    <div class="sec-head">
+      <h2>斗罗大陆漫画瓜子人物线索</h2>
+      <p>四条主要线索，帮助理清关系网。</p>
+    </div>
+    <div class="roles">
+      <div class="role">
+        <svg class="av" viewBox="0 0 56 56" aria-hidden="true"><circle cx="28" cy="28" r="26" fill="#ffcf5c"/><circle cx="21" cy="24" r="3.4" fill="#1b1f3a"/><circle cx="35" cy="24" r="3.4" fill="#1b1f3a"/><path d="M20 36c5 4 11 4 16 0" stroke="#1b1f3a" stroke-width="3" fill="none" stroke-linecap="round"/></svg>
+        <strong>主角线</strong>
+        <span>成长与觉醒</span>
+      </div>
+      <div class="role">
+        <svg class="av" viewBox="0 0 56 56" aria-hidden="true"><circle cx="28" cy="28" r="26" fill="#ff8a3d"/><path d="M28 12l4 11h12l-9 8 4 12-11-7-11 7 4-12-9-8h12z" fill="#fffdf7"/></svg>
+        <strong>同伴线</strong>
+        <span>组队与配合</span>
+      </div>
+      <div class="role">
+        <svg class="av" viewBox="0 0 56 56" aria-hidden="true"><circle cx="28" cy="28" r="26" fill="#1b1f3a"/><path d="M18 34l10-16 10 16z" fill="#ffcf5c"/><circle cx="28" cy="40" r="3" fill="#f4f1e8"/></svg>
+        <strong>师长线</strong>
+        <span>训练与规则</span>
+      </div>
+      <div class="role">
+        <svg class="av" viewBox="0 0 56 56" aria-hidden="true"><circle cx="28" cy="28" r="26" fill="#3b4066"/><path d="M16 22h24M16 30h24M16 38h16" stroke="#ffcf5c" stroke-width="3.4" stroke-linecap="round"/></svg>
+        <strong>对手线</strong>
+        <span>对抗与升级</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="block wrap" id="about">
+    <div class="sec-head">
+      <h2>斗罗大陆漫画瓜子内容说明</h2>
+    </div>
+    <div class="prose">
+      <p><strong>斗罗大陆漫画瓜子</strong>是一个围绕同名漫画阅读需求组织的信息页面。它不替代原作发布渠道，而是把读者最常问的三件事——从哪一话开始、章节怎么排、人物是谁——整理成可以直接使用的内容结构。页面中的入口、提示与人物线索都服务于同一个目的：让阅读过程少走弯路。</p>
+      <p>对初次接触的读者，建议先读开篇到武魂觉醒的部分。这一段篇幅不长，却决定了后面所有战斗描写的理解方式；跳过它直接看高阶对战，容易在魂环与等级设定上卡住。对已经读到中段的读者，斗罗大陆漫画瓜子的价值更多体现在章节定位与回看提示上，尤其是队伍成员变动前后的几话，回看一页往往能省下猜测的时间。</p>
+      <p>需要说明的是，漫画连载的章节标题、更新频率与可读范围由实际发布方决定，本页只提供阅读组织方式与查找路径，不承诺具体更新时间。页面中出现的“下载”入口目前为占位状态，暂不可用，后续替换为正式地址后会正常开放。斗罗大陆漫画瓜子的相关内容会随可确认的信息逐步补充，已写出的说明均以页面可见信息为准。</p>
+    </div>
+  </section>
+
+  <section class="block wrap" id="find">
+    <div class="sec-head">
+      <h2>查找斗罗大陆漫画瓜子章节</h2>
+      <p>输入关键词，快速定位本页对应栏目。</p>
+    </div>
+    <div class="searchbox">
+      <label for="q">输入章节阶段或人物线索，如“开篇”“学院”“同伴”“对手”</label>
+      <div class="field">
+        <input id="q" type="search" placeholder="例如：学院、师长、阅读顺序" autocomplete="off">
+        <button class="btn primary" type="button" id="goBtn">查找</button>
+      </div>
+      <div id="searchResult" role="status" aria-live="polite">尚未输入关键词。</div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap foot-grid">
+    <div>
+      <div class="foot-brand">
+        <svg class="mark" viewBox="0 0 64 64" aria-hidden="true">
+          <rect width="64" height="64" rx="14" fill="#1b1f3a"/>
+          <circle cx="24" cy="26" r="9" fill="#ffcf5c"/>
+          <circle cx="42" cy="38" r="9" fill="#ff8a3d"/>
+          <path d="M14 48c8-6 28-6 36 0" stroke="#f4f1e8" stroke-width="4" fill="none" stroke-linecap="round"/>
+        </svg>
+        <span>斗罗大陆漫画瓜子</span>
+      </div>
+      <p>斗罗大陆漫画瓜子主题阅读入口页，整理章节路径、阅读提示与人物线索，具体连载内容以实际发布渠道为准。</p>
+    </div>
+    <div class="foot-links">
+      <a href="#chapters">章节入口</a>
+      <a href="#reading">阅读提示</a>
+      <a href="#roles">人物线索</a>
+      <a href="#about">内容说明</a>
+      <a href="#find">找章节</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var input = document.getElementById('q');
+  var btn = document.getElementById('goBtn');
+  var out = document.getElementById('searchResult');
+  var map = [
+    {keys:['开篇','起步','觉醒','武魂'], label:'章节入口 · 开篇到觉醒', id:'chapters', desc:'从主角童年与武魂觉醒看起，理解后续战斗设定。'},
+    {keys:['学院','主线','试炼','魂环'], label:'章节入口 · 学院与魂师试炼', id:'chapters', desc:'组队、魂环获取与对抗训练交替推进的密集段落。'},
+    {keys:['高阶','对战','进阶','势力'], label:'章节入口 · 高阶对战段落', id:'chapters', desc:'战斗分镜更密集，建议回看前文设定再继续。'},
+    {keys:['顺序','提示','阅读','按卷'], label:'阅读提示', id:'reading', desc:'先认设定、按卷追读、留意队伍变化、回看对照页。'},
+    {keys:['主角','同伴','师长','对手','人物'], label:'人物线索', id:'roles', desc:'主角线、同伴线、师长线与对手线四条关系线索。'},
+    {keys:['说明','来源','下载','更新'], label:'内容说明', id:'about', desc:'页面定位、连载范围与下载入口的当前状态。'}
+  ];
+  function run(){
+    var v = (input.value || '').trim();
+    if(!v){ out.innerHTML = '尚未输入关键词。'; return; }
+    var hit = null;
+    for(var i=0;i<map.length;i++){
+      for(var j=0;j<map[i].keys.length;j++){
+        if(v.indexOf(map[i].keys[j]) > -1){ hit = map[i]; break; }
+      }
+      if(hit) break;
+    }
+    if(hit){
+      out.innerHTML = '找到相关栏目：<b>' + hit.label + '</b> — ' + hit.desc + ' <a href="#' + hit.id + '" style="border-bottom:2px solid #ffcf5c;font-weight:700;color:#1b1f3a;">前往查看</a>';
+    }else{
+      out.innerHTML = '未匹配到“' + v.replace(/[<>&]/g,'') + '”。可试试“开篇”“学院”“高阶”“同伴”“说明”等关键词。';
+    }
+  }
+  btn.addEventListener('click', run);
+  input.addEventListener('keydown', function(e){ if(e.key === 'Enter'){ e.preventDefault(); run(); } });
+})();
+</script>
+
+</body>
+</html>
