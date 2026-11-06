@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>漫蛙-漫蛙在线阅读入口_漫画阅读平台使用与内容导览</title>
+<meta name="description" content="漫蛙是漫画在线阅读平台，本页提供漫蛙阅读入口说明、内容分区导览与常见使用要点，帮助读者快速找到想看的漫画类型与阅读路径。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23146b4f'/%3E%3Ccircle cx='24' cy='26' r='6' fill='%23fff'/%3E%3Ccircle cx='42' cy='26' r='6' fill='%23fff'/%3E%3Ccircle cx='24' cy='27' r='2.6' fill='%23146b4f'/%3E%3Ccircle cx='42' cy='27' r='2.6' fill='%23146b4f'/%3E%3Cpath d='M18 42c8 8 20 8 28 0' stroke='%23fff' stroke-width='4' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+<style>
+:root{
+  --green:#146b4f;
+  --green-deep:#0d4a37;
+  --mint:#e8f3ee;
+  --ink:#1d2421;
+  --gray:#5d6a64;
+  --line:#d9e5df;
+  --cream:#fbfaf6;
+  --amber:#d98a2b;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif;
+  color:var(--ink);
+  background:var(--cream);
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none}
+img,svg{display:block;max-width:100%}
+.wrap{width:min(1120px,92vw);margin:0 auto}
+
+/* header */
+header.site{
+  position:sticky;top:0;z-index:50;
+  background:rgba(251,250,246,.94);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);
+}
+.nav-bar{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:14px 0}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.22rem;letter-spacing:.5px;color:var(--green-deep)}
+.brand .mark{width:38px;height:38px;border-radius:11px;background:var(--green);display:grid;place-items:center;flex:none}
+.brand .mark svg{width:24px;height:24px}
+nav.main ul{display:flex;gap:6px;list-style:none;flex-wrap:wrap}
+nav.main a{
+  display:block;padding:8px 13px;border-radius:9px;font-size:.93rem;color:var(--gray);
+  transition:.2s;
+}
+nav.main a:hover,nav.main a:focus-visible{background:var(--mint);color:var(--green-deep)}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:11px 22px;border-radius:11px;font-weight:700;font-size:.95rem;
+  background:var(--green);color:#fff;border:0;cursor:pointer;transition:.22s;
+}
+.btn:hover{background:var(--green-deep);transform:translateY(-1px)}
+.btn.ghost{background:#fff;color:var(--green-deep);border:1.5px solid var(--line)}
+.btn.ghost:hover{background:var(--mint)}
+.btn[aria-disabled="true"]{opacity:.9;cursor:default}
+
+/* hero */
+.hero{
+  position:relative;overflow:hidden;
+  background:linear-gradient(160deg,#f2f8f5 0%,#e6f2ec 55%,#dff0e7 100%);
+  border-bottom:1px solid var(--line);
+}
+.hero-inner{
+  display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center;
+  padding:68px 0 76px;
+}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:.8rem;font-weight:700;letter-spacing:1.5px;color:var(--green);
+  background:#fff;border:1px solid var(--line);border-radius:999px;
+  padding:5px 14px;margin-bottom:20px;
+}
+.eyebrow .dot{width:7px;height:7px;border-radius:50%;background:var(--amber)}
+h1{
+  font-size:clamp(2.4rem,5.4vw,3.7rem);
+  line-height:1.12;font-weight:900;letter-spacing:2px;color:var(--green-deep);
+  margin-bottom:22px;
+}
+.hero p.lead{font-size:1.06rem;color:#3d4a44;max-width:34em;margin-bottom:30px}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.hero-note{font-size:.84rem;color:var(--gray);margin-top:18px}
+.hero-art{position:relative;display:grid;place-items:center}
+.hero-art .card-stack{
+  background:#fff;border-radius:26px;padding:26px;border:1px solid var(--line);
+  box-shadow:0 26px 60px -30px rgba(13,74,55,.45);
+  width:100%;max-width:360px;
+}
+.hero-art .glyph{width:100%;height:auto}
+.tag-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.tag-row span{
+  font-size:.78rem;padding:4px 11px;border-radius:999px;background:var(--mint);color:var(--green-deep);font-weight:600;
+}
+
+/* section base */
+section{padding:72px 0}
+.sec-head{max-width:44em;margin-bottom:38px}
+.sec-kicker{font-size:.8rem;font-weight:800;letter-spacing:2px;color:var(--amber);margin-bottom:10px}
+h2{font-size:clamp(1.55rem,3vw,2.05rem);line-height:1.3;color:var(--green-deep);font-weight:800;letter-spacing:.5px}
+.sec-head p{margin-top:14px;color:var(--gray);font-size:.98rem}
+
+/* content grid */
+.cat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.cat-card{
+  background:#fff;border:1px solid var(--line);border-radius:16px;padding:26px 24px;
+  transition:.24s;
+}
+.cat-card:hover{border-color:#bcd8ca;box-shadow:0 18px 36px -26px rgba(13,74,55,.5);transform:translateY(-3px)}
+.cat-icon{
+  width:46px;height:46px;border-radius:12px;background:var(--mint);
+  display:grid;place-items:center;margin-bottom:16px;color:var(--green-deep);
+}
+.cat-card h3{font-size:1.06rem;font-weight:800;margin-bottom:8px;color:var(--ink)}
+.cat-card p{font-size:.9rem;color:var(--gray)}
+.cat-card .more{display:inline-block;margin-top:14px;font-size:.84rem;font-weight:700;color:var(--green)}
+
+/* reading flow */
+.flow{background:var(--mint);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.flow-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:34px}
+.flow-step .num{
+  font-size:2.2rem;font-weight:900;color:#fff;background:var(--green);
+  width:52px;height:52px;border-radius:14px;display:grid;place-items:center;
+  font-size:1.15rem;margin-bottom:16px;
+}
+.flow-step h3{font-size:1.04rem;font-weight:800;margin-bottom:8px}
+.flow-step p{font-size:.91rem;color:#3f4c46}
+
+/* faq */
+.faq-list{display:grid;gap:12px;max-width:880px}
+details{
+  background:#fff;border:1px solid var(--line);border-radius:13px;padding:0 22px;
+  transition:.2s;
+}
+details[open]{border-color:#bcd8ca;box-shadow:0 14px 30px -24px rgba(13,74,55,.5)}
+summary{
+  list-style:none;cursor:pointer;padding:18px 0;font-weight:700;font-size:.98rem;
+  display:flex;justify-content:space-between;align-items:center;gap:16px;color:var(--ink);
+}
+summary::-webkit-details-marker{display:none}
+summary .chev{width:20px;height:20px;flex:none;transition:.25s;color:var(--green)}
+details[open] summary .chev{transform:rotate(180deg)}
+details .ans{padding:0 0 20px;font-size:.92rem;color:var(--gray);border-top:1px dashed var(--line);padding-top:16px;margin-top:-2px}
+
+/* download band */
+.band{
+  background:var(--green-deep);color:#eaf5ef;border-radius:22px;
+  padding:44px 40px;display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap;
+}
+.band h2{color:#fff;font-size:1.5rem;margin-bottom:8px}
+.band p{font-size:.94rem;color:#c3dccf;max-width:38em}
+.band .btn{background:#fff;color:var(--green-deep)}
+.band .btn:hover{background:var(--mint)}
+
+/* footer */
+footer.site{background:#0b3126;color:#b9d4c8;padding:52px 0 34px;margin-top:8px}
+.foot-top{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:36px;padding-bottom:32px;border-bottom:1px solid rgba(255,255,255,.12)}
+.foot-brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.14rem;color:#fff;margin-bottom:12px}
+.foot-brand .mark{width:34px;height:34px;border-radius:10px;background:#17795a;display:grid;place-items:center}
+.foot-brand .mark svg{width:21px;height:21px}
+.foot-top p{font-size:.87rem;line-height:1.8;max-width:30em}
+.foot-col h4{color:#fff;font-size:.9rem;font-weight:700;margin-bottom:12px;letter-spacing:.5px}
+.foot-col ul{list-style:none;display:grid;gap:8px;font-size:.86rem}
+.foot-col a:hover{color:#fff}
+.foot-bottom{padding-top:22px;font-size:.8rem;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;color:#8fb3a4}
+
+@media (max-width:900px){
+  .hero-inner{grid-template-columns:1fr;gap:36px;padding:48px 0 56px}
+  .hero-art{order:-1}
+  .hero-art .card-stack{max-width:300px;padding:20px}
+  .cat-grid,.flow-grid{grid-template-columns:1fr}
+  .foot-top{grid-template-columns:1fr;gap:26px}
+  nav.main{display:none}
+  section{padding:52px 0}
+  .band{padding:32px 24px;border-radius:18px}
+}
+@media (max-width:520px){
+  .hero-actions .btn{width:100%;justify-content:center}
+  h1{letter-spacing:1px}
+}
+</style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav-bar">
+    <a href="#top" class="brand" aria-label="漫蛙首页">
+      <span class="mark" aria-hidden="true">
+        <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="23" cy="26" r="7" fill="#fff"/>
+          <circle cx="41" cy="26" r="7" fill="#fff"/>
+          <circle cx="23" cy="27" r="3" fill="#146b4f"/>
+          <circle cx="41" cy="27" r="3" fill="#146b4f"/>
+          <path d="M17 43c8 8 22 8 30 0" stroke="#fff" stroke-width="4.5" fill="none" stroke-linecap="round"/>
+        </svg>
+      </span>
+      <span>漫蛙</span>
+    </a>
+    <nav class="main" aria-label="主导航">
+      <ul>
+        <li><a href="#categories">内容分区</a></li>
+        <li><a href="#howto">阅读路径</a></li>
+        <li><a href="#faq">常见问题</a></li>
+        <li><a href="#download">应用下载</a></li>
+      </ul>
+    </nav>
+    <a class="btn" href="#download">进入阅读</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="wrap hero-inner">
+      <div class="hero-copy">
+        <span class="eyebrow"><span class="dot"></span>在线漫画阅读</span>
+        <h1 id="hero-title">漫蛙</h1>
+        <p class="lead">漫蛙是一个以漫画在线阅读为核心的内容平台，按题材与连载状态组织作品，读者可在同一入口浏览目录、查看章节并继续上次的阅读进度。</p>
+        <div class="hero-actions">
+          <a class="btn" href="#categories">浏览内容分区</a>
+          <a class="btn ghost" href="#howto">了解阅读路径</a>
+        </div>
+        <p class="hero-note">页面内容为平台使用与内容导览说明，具体作品与章节以站点实际显示为准。</p>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="card-stack">
+          <svg class="glyph" viewBox="0 0 300 210" xmlns="http://www.w3.org/2000/svg" role="img">
+            <rect x="0" y="0" width="300" height="210" rx="18" fill="#e8f3ee"/>
+            <rect x="26" y="30" width="112" height="150" rx="10" fill="#146b4f"/>
+            <rect x="40" y="46" width="84" height="60" rx="6" fill="#a9d6c2"/>
+            <rect x="40" y="116" width="84" height="8" rx="4" fill="#7cc0a6"/>
+            <rect x="40" y="132" width="60" height="8" rx="4" fill="#7cc0a6"/>
+            <rect x="40" y="148" width="72" height="8" rx="4" fill="#7cc0a6"/>
+            <rect x="160" y="30" width="114" height="70" rx="10" fill="#ffffff" stroke="#cfe4da"/>
+            <rect x="160" y="110" width="114" height="70" rx="10" fill="#ffffff" stroke="#cfe4da"/>
+            <circle cx="188" cy="65" r="12" fill="#d98a2b"/>
+            <path d="M176 88c4-10 20-10 24 0" stroke="#146b4f" stroke-width="4" fill="none" stroke-linecap="round"/>
+            <rect x="176" y="128" width="82" height="8" rx="4" fill="#cfe4da"/>
+            <rect x="176" y="144" width="62" height="8" rx="4" fill="#cfe4da"/>
+            <rect x="176" y="160" width="74" height="8" rx="4" fill="#cfe4da"/>
+          </svg>
+          <div class="tag-row">
+            <span>连载更新</span><span>题材分类</span><span>章节阅读</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATEGORIES -->
+  <section id="categories" aria-labelledby="cat-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-kicker">内容分区</div>
+        <h2 id="cat-title">漫蛙的作品如何分类</h2>
+        <p>漫蛙按读者找书时最常用的两种方式组织内容：先看题材，再看连载状态。分类并非装饰，它决定了从首页到具体章节的点击路径。</p>
+      </div>
+      <div class="cat-grid">
+        <article class="cat-card">
+          <div class="cat-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 5h16v14H4z"/><path d="M4 10h16M9 10v9"/></svg>
+          </div>
+          <h3>题材分类</h3>
+          <p>按少年、少女、奇幻、都市、悬疑等方向归档，适合已有偏好、希望快速缩小范围的读者。题材页通常同时展示封面与简介摘要。</p>
+          <a class="more" href="#faq">查看选择建议 →</a>
+        </article>
+        <article class="cat-card">
+          <div class="cat-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 7v10M7 12h10"/><circle cx="12" cy="12" r="9"/></svg>
+          </div>
+          <h3>连载与完结</h3>
+          <p>连载中的作品按更新时间排序，完结作品适合一次性读完。读者可据此决定是追更还是整本阅读，减少中途等待。</p>
+          <a class="more" href="#howto">了解追更方式 →</a>
+        </article>
+        <article class="cat-card">
+          <div class="cat-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h10M4 18h7"/></svg>
+          </div>
+          <h3>章节与阅读进度</h3>
+          <p>作品详情页列出章节列表，已读章节与阅读位置会被记录，再次进入时可直接接着上次的位置继续浏览。</p>
+          <a class="more" href="#howto">阅读路径说明 →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW TO -->
+  <section id="howto" class="flow" aria-labelledby="flow-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-kicker">阅读路径</div>
+        <h2 id="flow-title">从漫蛙首页到具体章节的三步</h2>
+        <p>访问需求通常很直接：找到想看的作品并开始读。以下路径对应这一需求，每一步都留下可返回的入口。</p>
+      </div>
+      <div class="flow-grid">
+        <div class="flow-step">
+          <div class="num" aria-hidden="true">01</div>
+          <h3>选定题材或榜单</h3>
+          <p>不确定看什么时，从题材分类或更新榜单切入；已有目标时，直接使用站内搜索输入作品名，结果按相关度排列。</p>
+        </div>
+        <div class="flow-step">
+          <div class="num" aria-hidden="true">02</div>
+          <h3>核对作品信息</h3>
+          <p>详情页包含作者、题材标签、连载状态与简介。先确认这些信息，再决定是否进入章节列表，可以避免读到一半才发现取向不符。</p>
+        </div>
+        <div class="flow-step">
+          <div class="num" aria-hidden="true">03</div>
+          <h3>按章节顺序阅读</h3>
+          <p>章节按序排列，点击任意一章进入阅读器；翻页与返回目录的入口固定在页面中，长章节阅读时不必反复退回首页。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" aria-labelledby="faq-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-kicker">常见问题</div>
+        <h2 id="faq-title">使用漫蛙时读者最常关心的几点</h2>
+        <p>以下问题围绕找书、追更与设备使用展开，回答只陈述平台的一般运作方式，不涉及具体作品内容。</p>
+      </div>
+      <div class="faq-list">
+        <details open>
+          <summary>漫蛙的内容需要注册才能看吗？<span class="chev" aria-hidden="true">▾</span></summary>
+          <div class="ans">平台以在线阅读为主，浏览目录与查看作品信息一般无需额外步骤；收藏、记录阅读进度等功能与账号状态相关，具体以站点页面提示为准。</div>
+        </details>
+        <details>
+          <summary>怎样第一时间知道作品更新？<span class="chev" aria-hidden="true">▾</span></summary>
+          <div class="ans">连载作品会在章节列表中体现最新章节，更新榜单也按时间排序。把常看的作品加入收藏，能减少每次重新搜索的步骤。</div>
+        </details>
+        <details>
+          <summary>手机上阅读体验如何？<span class="chev" aria-hidden="true">▾</span></summary>
+          <div class="ans">阅读器页面按屏幕宽度自适应，支持纵向滑动浏览。竖屏适合连续阅读，横屏时可看到更完整的跨页画面，可按习惯切换。</div>
+        </details>
+        <details>
+          <summary>找不到某部作品怎么办？<span class="chev" aria-hidden="true">▾</span></summary>
+          <div class="ans">先尝试用更短的关键词搜索，或改用作者名检索；若仍无结果，可能是该作品未收录或已调整，可回到题材分类浏览相近题材。</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- DOWNLOAD -->
+  <section id="download" aria-labelledby="dl-title">
+    <div class="wrap">
+      <div class="band">
+        <div>
+          <h2 id="dl-title">把漫蛙阅读入口放到桌面</h2>
+          <p>桌面版便于在电脑上连续阅读与整理收藏。下载入口将在正式地址确定后开放，当前可先通过浏览器直接访问站点阅读。</p>
+        </div>
+        <a class="btn" href="#" data-download-placeholder="true" aria-disabled="true" tabindex="-1" style="pointer-events:none">下载</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-top">
+      <div>
+        <div class="foot-brand">
+          <span class="mark" aria-hidden="true">
+            <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="23" cy="26" r="7" fill="#fff"/>
+              <circle cx="41" cy="26" r="7" fill="#fff"/>
+              <circle cx="23" cy="27" r="3" fill="#17795a"/>
+              <circle cx="41" cy="27" r="3" fill="#17795a"/>
+              <path d="M17 43c8 8 22 8 30 0" stroke="#fff" stroke-width="4.5" fill="none" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <span>漫蛙</span>
+        </div>
+        <p>漫蛙以漫画在线阅读为主线，提供题材分类、章节阅读与阅读进度记录等基础功能，页面内容用于说明平台的使用方式与内容结构。</p>
+      </div>
+      <div class="foot-col">
+        <h4>页面导航</h4>
+        <ul>
+          <li><a href="#categories">内容分区</a></li>
+          <li><a href="#howto">阅读路径</a></li>
+          <li><a href="#faq">常见问题</a></li>
+          <li><a href="#download">应用下载</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>使用提示</h4>
+        <ul>
+          <li><a href="#faq">账号与收藏</a></li>
+          <li><a href="#faq">移动端阅读</a></li>
+          <li><a href="#howto">章节与进度</a></li>
+          <li><a href="#top">返回顶部</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>漫蛙 · 在线漫画阅读与内容导览</span>
+      <span>页面信息以站点实际展示为准</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
